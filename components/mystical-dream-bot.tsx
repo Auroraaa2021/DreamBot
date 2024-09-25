@@ -20,7 +20,7 @@ const openai = new OpenAI({
 
 export default function MysticalDreamBot() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'bot', content: "Greetings, seeker of dreams. I am Mysti. Share with me the visions of your night, and I shall unveil their hidden meanings." }
+    { role: 'bot', content: "Greetings, seeker of dreams. I am Mysti, your guide to the realm of slumber. Share with me the visions of your night, and I shall unveil their hidden meanings." }
   ])
   const [input, setInput] = useState('')
   const [isTyping, setIsTyping] = useState(false)
@@ -49,8 +49,8 @@ export default function MysticalDreamBot() {
       const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [
-            { role: "system", content: "You are Mysti, a mystical dream interpreter. Provide mysterious and insightful interpretations for the dreams described to you." },
-            { role: "user", content: input }
+          { role: "system", content: "You are Mysti, a mystical dream interpreter. Provide mysterious and insightful interpretations for the dreams described to you." },
+          { role: "user", content: input }
         ],
       })
 
