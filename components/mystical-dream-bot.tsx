@@ -8,7 +8,6 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Moon, Stars, Send } from 'lucide-react'
 import OpenAI from 'openai'
 
-
 interface Message {
   role: 'user' | 'bot'
   content: string
